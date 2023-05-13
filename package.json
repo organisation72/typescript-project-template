@@ -7,7 +7,8 @@
   "author": "Cyrille Derche <c.derche@me.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "env-cmd -f ./.env nodemon ./src/index.ts"
+    "dev": "env-cmd -f ./.env nodemon ./src/index.ts",
+    "build": "tsc"
   },
   "devDependencies": {
     "@types/node": "^20.1.3",
