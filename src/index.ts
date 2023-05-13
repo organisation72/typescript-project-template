@@ -1,7 +1,5 @@
-const a: string[] = ['a', 'b', 'c']
+import sum from './sum'
 
-function add (v: string): void {
-  a.push(v)
-}
+const [a, b]: number[] = [1, 2]
 
-add('d')
+console.log(`${a} + ${b} = ${sum(a, b)}`)
