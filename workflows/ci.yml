@@ -1,0 +1,7 @@
+name: Typescript Project Template CI
+
+on: push
+
+jobs:
+  ci:
+    uses organisation72/.github/workflows/typescript-ci.yml
