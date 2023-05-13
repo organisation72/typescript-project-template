@@ -1,0 +1,9 @@
+{
+  "name": "typescript-project-template",
+  "version": "1.0.0",
+  "description": "typescript project template",
+  "main": "index.js",
+  "repository": "https://github.com/organisation72/typescript-project-template.git",
+  "author": "Cyrille Derche <c.derche@me.com>",
+  "license": "MIT"
+}
