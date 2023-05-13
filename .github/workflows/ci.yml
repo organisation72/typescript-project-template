@@ -4,4 +4,4 @@ on: push
 
 jobs:
   ci:
-    uses: organisation72/.github/workflows/typescript-ci.yml
+    uses: organisation72/.github/workflows/typescript-ci.yml@v1
