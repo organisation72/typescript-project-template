@@ -1,7 +1,4 @@
 {
-    "env": {
-        "ES2017": true
-    },
     "extends": [
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended"
