@@ -5,3 +5,5 @@ on: push
 jobs:
   ci:
     uses: organisation72/workflows/.github/workflows/typescript-ci.yml@main
+    secrets:
+      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
