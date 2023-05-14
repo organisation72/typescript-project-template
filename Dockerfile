@@ -1,8 +1,11 @@
-FROM node:18-alpine
-
+FROM node:18-alpine AS base
+WORKDIR /project
 COPY . .
-
 RUN yarn
-RUN yarn build
 
+FROM base AS test
+RUN yarn test --coverage
+
+FROM base AS prod
+RUN yarn build
 CMD yarn start
