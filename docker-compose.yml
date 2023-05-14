@@ -8,4 +8,4 @@ services:
     volumes:
       - ./coverage:/project/coverage
   redis:
-    image: "redis:alpine"
+    image: 'redis:alpine'
