@@ -1,5 +1,7 @@
-import sum from './sum'
+import app from './app'
 
-const [a, b]: number[] = [1, 2]
+const port = Number(process.env.PORT)
 
-console.log(`${a} + ${b} = ${sum(a, b)}`)
+app.listen(port, () => {
+  console.log(`⚡️[server]: Server is running at http://localhost:${port}`)
+})
