@@ -9,9 +9,20 @@ services:
       - ./coverage:/project/coverage
     environment:
       - PORT=3000
-      - REDIS_QUEUE_HOST=localhost
+      - REDIS_QUEUE_HOST=redis
       - REDIS_QUEUE_PORT=6379
+      - MONGODB_URL=mongodb://root:pass@mongo:27017/
+    depends_on:
+      - redis
+      - mongo
   redis:
     image: 'redis:alpine'
     ports:
       - 6379:6379
+  mongo:
+    image: 'mongo'
+    ports:
+      - 27017:27017
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=pass
