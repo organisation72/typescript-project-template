@@ -22,7 +22,7 @@ if (error != null) {
 
 // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
 const MONGODB_URL = `mongodb://${env.MONGODB_USER}:${env.MONGODB_PASS}@${env.MONGODB_HOST}:${env.MONGODB_PORT}/${env.MONGODB_NAME !== undefined ? env.MONGODB_NAME : ''}`
-console.log(`MONGODB_URL: ${MONGODB_URL}`)
+
 export default {
   ...env,
   MONGODB_URL
