@@ -11,10 +11,13 @@ services:
     volumes:
       - ./coverage:/project/coverage
     environment:
-      - PORT=3000
-      - REDIS_QUEUE_HOST=redis
-      - REDIS_QUEUE_PORT=6379
-      - MONGODB_URL=mongodb://root:pass@mongo:27017/
+      PORT=3000
+      MONGODB_HOST=mongo
+      MONGODB_PORT=27017
+      MONGODB_USER=root
+      MONGODB_PASS=pass
+      REDIS_QUEUE_HOST=localhost
+      REDIS_QUEUE_PORT=6379
     depends_on:
       - redis
       - mongo
