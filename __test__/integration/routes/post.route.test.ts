@@ -1,14 +1,12 @@
 import supertest from 'supertest'
-import app from '../app'
+import app from '../../../src/app'
 import mongoose from 'mongoose'
-import Post from '../models/Post'
-
-const MONGODB_URL = String(process.env.MONGODB_URL)
-console.log('MONGODB_URL', MONGODB_URL)
+import Post from '../../../src/models/post.model'
+import { env } from '../../../src/config'
 
 beforeEach(async () => {
   mongoose.set('strictQuery', true)
-  await mongoose.connect(String(MONGODB_URL))
+  await mongoose.connect(env.MONGODB_URL)
 })
 
 afterEach(async () => {

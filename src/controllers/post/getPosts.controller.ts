@@ -1,8 +1,8 @@
 import { type Request, type Response } from 'express'
-import Post from '../models/Post'
+import Post from '../../models/post.model'
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export const getPosts = async (_req: Request, res: Response) => {
+const getPosts = async (_req: Request, res: Response) => {
   try {
     const query = Post.find({})
     const posts = await query.exec()
@@ -11,3 +11,5 @@ export const getPosts = async (_req: Request, res: Response) => {
     res.sendStatus(500)
   }
 }
+
+export default getPosts
