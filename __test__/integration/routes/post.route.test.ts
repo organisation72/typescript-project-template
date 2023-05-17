@@ -1,10 +1,9 @@
 import supertest from 'supertest'
-import app from '../app'
+import app from '../../../src/app'
 import mongoose from 'mongoose'
-import Post from '../models/Post'
+import Post from '../../../src/models/post.model'
 
 const MONGODB_URL = String(process.env.MONGODB_URL)
-console.log('MONGODB_URL', MONGODB_URL)
 
 beforeEach(async () => {
   mongoose.set('strictQuery', true)

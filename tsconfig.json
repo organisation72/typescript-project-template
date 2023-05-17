@@ -19,7 +19,7 @@
   "include": [
       "src/**/*",
       "__tests__/**/*"
-  ],
+, "__test__/unit/model/post.model.test.ts", "__test__/integration/routes/post.route.test.ts", "__test__/unit/controller/post/getPosts.controller.test.ts", "__test__/integration/routes/app.test.ts"  ],
   "ts-node": {
       "transpileOnly": true,
       "files": true
