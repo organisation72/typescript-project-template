@@ -14,7 +14,7 @@
     "test-docker": "jest --detectOpenHandles",
     "coverage": "yarn test --coverage",
     "coverage-docker": "yarn test-docker --coverage",
-    "start": "node dist/src/index.js"
+    "start": "node dist/index.js"
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
