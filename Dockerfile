@@ -3,8 +3,8 @@ WORKDIR /project
 COPY . .
 RUN yarn
 
-FROM base as test
+FROM base AS test
 
-FROM base as prod
+FROM base AS prod
 RUN yarn build
 CMD yarn start
