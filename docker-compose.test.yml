@@ -10,7 +10,7 @@ services:
       - 3000:3000
     volumes:
       - ./coverage:/project/coverage
-    environment:
+    args:
       - PORT=3000
       - MONGODB_HOST=mongo
       - MONGODB_PORT=27017
