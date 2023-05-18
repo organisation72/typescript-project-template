@@ -1,6 +1,6 @@
 name: Typescript Project Template CI
 
-on: pull_request
+on: push
 
 jobs:
   compose:
