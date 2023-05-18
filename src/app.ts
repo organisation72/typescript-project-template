@@ -4,7 +4,7 @@ import postRoute from './routes/post.route'
 const app: Express = express()
 
 app.get('/', (req: Request, res: Response) => {
-  res.send('Express + TypeScript Server')
+  res.send('Hello world')
 })
 
 app.use('/posts', postRoute)
