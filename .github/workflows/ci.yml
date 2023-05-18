@@ -1,6 +1,6 @@
 name: Typescript Project Template CI
 
-on: push
+on: pull_request
 
 jobs:
   ci:
