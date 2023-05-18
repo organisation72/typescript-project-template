@@ -7,13 +7,13 @@ services:
       target: test
       dockerfile: Dockerfile
       args:
-      - PORT=3000
-      - MONGODB_HOST=mongo
-      - MONGODB_PORT=27017
-      - MONGODB_USER=root
-      - MONGODB_PASS=pass
-      - REDIS_QUEUE_HOST=localhost
-      - REDIS_QUEUE_PORT=6379
+        PORT: 3000
+        MONGODB_HOST: mongo
+        MONGODB_PORT: 27017
+        MONGODB_USER: root
+        MONGODB_PASS: pass
+        REDIS_QUEUE_HOST: localhost
+        REDIS_QUEUE_PORT: 6379
     ports:
       - 3000:3000
     volumes:
