@@ -3,9 +3,21 @@ name: Typescript Project Template CI
 on: pull_request
 
 jobs:
-  ci:
-    uses: organisation72/workflows/.github/workflows/typescript-ci.yml@main
-    secrets:
-      CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  compose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: isbang/compose-actions@v1.4.1
+        with:
+          compose-file: "./docker-compose.test.yml"
+          down-flags: "--volumes"
+          services:
+            app
+            redis
+            mongo
+#   ci:
+#     uses: organisation72/workflows/.github/workflows/typescript-ci.yml@main
+#     secrets:
+#       CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+#       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
