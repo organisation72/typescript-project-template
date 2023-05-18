@@ -11,7 +11,7 @@ jobs:
         with:
           compose-file: "./docker-compose.test.yml"
           down-flags: "--volumes"
-          services:
+          services: |
             app
             redis
             mongo
