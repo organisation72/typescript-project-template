@@ -4,6 +4,7 @@ COPY . .
 RUN yarn
 
 FROM base AS test
+RUN yarn test
 
 FROM base AS prod
 RUN yarn build
