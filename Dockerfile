@@ -4,7 +4,7 @@ COPY . .
 RUN yarn
 
 FROM base AS test
-RUN yarn test
+RUN yarn test-docker
 
 FROM base AS prod
 RUN yarn build
